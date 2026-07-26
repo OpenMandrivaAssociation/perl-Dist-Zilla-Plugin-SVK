@@ -1,15 +1,13 @@
 %define upstream_name    Dist-Zilla-Plugin-SVK
-%define upstream_version 0.10
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.10
+Release:	7
 
 Summary:	Provide the allow_dirty & changelog attributes
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://svn.openfoundry.org/dzilsvk
-Source0:	https://cpan.metacpan.org/authors/id/D/DR/DRBEAN/Dist-Zilla-Plugin-SVK-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DR/DRBEAN/Dist-Zilla-Plugin-SVK-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -47,7 +45,7 @@ This set of plugins for the Dist::Zilla manpage can do interesting things
 for module authors using http://svk.bestpractical.com to track their work.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
